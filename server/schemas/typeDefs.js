@@ -7,6 +7,10 @@ const typeDefs = gql`
     username: String
     email: String
   }
+
+  type Query {
+    user(username: String!): User
+  }
 `;
 
 module.exports = typeDefs;
