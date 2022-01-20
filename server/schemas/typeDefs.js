@@ -12,17 +12,22 @@ const typeDefs = gql`
   }
 
   type Note {
-    _id: ID
+    noteId: ID
     noteText: String
     writtenAt: String
     username: String
   }
 
   type State {
-    _id: ID
+    stateId: ID
     state: String
     visitedAt: String
     username: String
+  }
+
+  type Auth {
+    token: ID!
+    user: User
   }
 
   type Query {
@@ -33,10 +38,10 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    login(email: String!, password: String!): User
-    addUser(username: String!, email: String!, password: String!): User
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     addState(state: String!): State
-    addNote(userId: ID!, noteText: String!): User
+    addNote(_id: ID!, noteText: String!): User
   }
 `;
 
