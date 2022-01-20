@@ -1,5 +1,6 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
+const noteSchema = require("./Note");
 
 // Make a schema for Users
 const userSchema = new Schema(
@@ -31,6 +32,7 @@ const userSchema = new Schema(
         ref: "State",
       },
     ],
+    notes: [noteSchema],
   },
   {
     toJson: {
