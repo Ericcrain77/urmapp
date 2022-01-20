@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-const noteSchema = require("./Note");
 
 const stateSchema = new Schema(
   {
@@ -15,7 +14,6 @@ const stateSchema = new Schema(
       type: String,
       required: true,
     },
-    notes: [noteSchema],
   },
   {
     toJson: {
