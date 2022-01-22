@@ -1,5 +1,5 @@
 import React from 'react';
-// import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import LoginSignUpPage from './pages/LoginPage';
 import Homepage from './pages/Homepage';
 import './App.css';
