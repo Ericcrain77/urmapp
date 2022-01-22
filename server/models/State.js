@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const stateSchema = new Schema(
   {
-    State: {
+    state: {
       type: String,
       required: true,
     },
@@ -10,18 +10,15 @@ const stateSchema = new Schema(
       type: Date,
       default: Date.now,
     },
-    username: {
-      type: String,
-      required: true,
-    },
-  },
-  {
-    toJson: {
-      getters: true,
-    },
   }
+  // {
+  //   toJson: {
+  //     getters: true,
+  //   },
+  // }
 );
 
-const State = model("State", stateSchema);
+// const State = model("State", stateSchema);
 
-module.exports = State;
+// module.exports = State;
+module.exports = stateSchema;

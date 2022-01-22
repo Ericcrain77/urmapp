@@ -1,6 +1,7 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 const noteSchema = require("./Note");
+const stateSchema = require("./State");
 
 // Make a schema for Users
 const userSchema = new Schema(
@@ -26,12 +27,7 @@ const userSchema = new Schema(
       required: true,
       minlength: 6,
     },
-    states: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "State",
-      },
-    ],
+    states: [stateSchema],
     notes: [noteSchema],
   },
   {
