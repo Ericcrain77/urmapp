@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const noteSchema = new Schema(
   {
-    // what they thought of the state/something they did
+    // what they thought of the state/something they did there
     noteText: {
       type: String,
       required: "You need to say something!",
