@@ -20,6 +20,10 @@
     background-image: linear-gradient(to right, var(--secondary-color), var(--primary-color) );
     justify-content: space-between;
     align-content: center;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .header a img {
@@ -29,12 +33,41 @@
     margin: 8px 0 8px 12px;
 }
 
-.header h1 {
+.header-right {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.header-right h1 {
     display: flex;
     align-self: center;
     margin: 0 30px 0 0;
     padding: 0 0 8px 0;
     color: var(--septenary-color);
+}
+
+.header-right button {
+    align-self: center;
+    margin: 0 30px 8px 0;
+    padding: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: none;
+    color: var(--quinary-color);
+    border: none;
+    border-radius: 8px;
+    opacity: 50%;
+}
+
+.header-right button:hover {
+    opacity: 100%;
+    background-color: var(--tertiary-color);
+    color: var(--quinary-color);
+    box-shadow: 0 0 5px var(--senary-color);
+}
+
+.header-right button:active {
+    transform: translateY(1px);
 }
 
 .page-body {
@@ -92,6 +125,7 @@
     max-width: 440px;
     padding: 0 0 0 8px;
     margin: 0 0 0.8vh 0;
+    outline: none;
 }
 
 .login-form #login-btn {
@@ -121,8 +155,12 @@
 
 #login-btn button:hover {
     background-color: var(--tertiary-color);
-    color: var(--senary-color);
+    color: var(--quinary-color);
     font-weight: 700;
+}
+
+#login-btn button:active {
+    transform: translateY(1px);
 }
 
 #signup-btn button {
@@ -137,8 +175,12 @@
 
 #signup-btn button:hover {
     background-color: var(--tertiary-color);
-    color: var(--senary-color);
+    color: var(--quinary-color);
     font-weight: 700;
+}
+
+#signup-btn button:active {
+    transform: translateY(1px);
 }
 
 .signup {
@@ -155,6 +197,7 @@
 
 .signup-form input {
     width: 20.0vw;
+    outline: none;
 }
 
 .signup-form label {
@@ -192,9 +235,9 @@
     align-items: center;
     background-color: var(--quaternary-color);
     width: 100vw;
-    position:fixed;
-    bottom:0;
-    left:0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 .footer h3 {
@@ -210,4 +253,9 @@
 
 .footer p a {
     text-decoration: none;
+    color: var(--quinary-color);
+}
+
+.footer p a:hover {
+    text-decoration: underline;
 }
