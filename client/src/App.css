@@ -47,6 +47,15 @@
   background-image: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color) );
 }
 
+.page-body-2 {
+  display: flex;
+  width: 100vw;
+  height: 86.4vh;
+  justify-content: center;
+  padding-bottom: 15.0vh;
+  background-color: var(--septenary-color);
+}
+
 .login-signup-logo {
   display: flex;
   width: 15.0vw;
@@ -174,4 +183,31 @@
   display: flex;
   align-self: center;
   margin: 2.0vh 0 0 0;
+}
+
+.footer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--quaternary-color);
+  width: 100vw;
+  position:fixed;
+  bottom:0;
+  left:0;
+}
+
+.footer h3 {
+  color: var(--quinary-color);
+  font-weight: 700;
+  align-self: center;
+  padding: 10px 0 5px 0;
+}
+
+.footer p {
+  margin-bottom: 8px;
+}
+
+.footer p a {
+  text-decoration: none;
 }
