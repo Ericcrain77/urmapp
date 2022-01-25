@@ -2,13 +2,13 @@ import React from 'react';
 import Map from '../components/Map';
 
 function HomePage() {
-  
+
 
   return (
     <section>
       <header className='header'>
         <a href="/">
-            <img className='header-logo' src="../public/logo164x101.png" alt="UrMapp Logo" />
+            <img className='header-logo' src="../assets/logo164x101.png" alt="UrMapp Logo" />
         </a>
         <div className="header-right">
             <h1>{Username}</h1>

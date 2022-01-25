@@ -19,7 +19,7 @@ function LoginSignUpPage() {
 
     return (
         <section className='page-body'>
-            <img className="login-signup-logo" src='../public/logo503x145.png' alt='UrMapp Logo' />
+            <img className="login-signup-logo" src='../assets/logo503x145.png' alt='UrMapp Logo' />
             {renderPage(currentPage)}
         </section>
     );

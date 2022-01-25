@@ -23,6 +23,6 @@ function App() {
         {renderPage(currentPage)}
     </main>
   );
-}
+};
 
 export default App;
