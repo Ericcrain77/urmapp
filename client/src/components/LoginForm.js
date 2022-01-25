@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-function LogIn(props) {
+function LogIn() {
  
     return (
         <div className='login'>

@@ -5,7 +5,6 @@ import logo164x101 from '../assets/logo164x101.png'
 
 function Homepage() {
 
-
   return (
     <section>
       <header className='header'>
