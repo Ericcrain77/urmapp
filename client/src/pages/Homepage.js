@@ -3,6 +3,7 @@ import Map from "../components/Map";
 
 import { useQuery } from "@apollo/client";
 import { GET_ME } from "../utils/queries";
+import logo from "../assets/0.png";
 
 function HomePage() {
   const { data: userData } = useQuery(GET_ME);
@@ -11,11 +12,7 @@ function HomePage() {
     <section>
       <header class="header">
         <a href="/">
-          <img
-            class="header-logo"
-            src="../public/logo164x101.png"
-            alt="UrMapp Logo"
-          />
+          <img class="header-logo" src={logo} alt="UrMapp Logo" />
         </a>
         <div class="header-right">
           <h1>{userData.me.username}</h1>
