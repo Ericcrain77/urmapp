@@ -3,7 +3,7 @@ const { gql } = require("apollo-server-express");
 // change User return in mutations to Auth in future
 const typeDefs = gql`
   type User {
-    _id: ID!
+    _id: ID
     username: String
     email: String
     statesVisited: Int
@@ -12,20 +12,20 @@ const typeDefs = gql`
   }
 
   type Note {
-    _id: ID!
+    _id: ID
     noteText: String
     writtenAt: String
     username: String
   }
 
   type State {
-    _id: ID!
+    _id: ID
     state: String
     visitedAt: String
   }
 
   type Auth {
-    token: ID!
+    token: ID
     user: User
   }
 

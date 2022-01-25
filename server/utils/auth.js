@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-const secret = "itsasecrettoeveryone";
+const secret = "mysecretsshhhhh";
 const expiration = "2h";
 
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
 
     // ["Bearer", "<tokenvalue>"]
     if (req.headers.authorization) {
-      token = token.split("").pop().trim();
+      token = token.split(" ").pop().trim();
     }
 
     if (!token) {
