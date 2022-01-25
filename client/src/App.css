@@ -128,7 +128,7 @@
   outline: none;
 }
 
-.login-form #login-btn {
+.login-form .login-btn {
   display: flex;
   align-self: center;
   justify-content: center;
@@ -137,7 +137,7 @@
   width: 65%;
 }
 
-#login-btn button {
+.login-btn button {
   width: 10vw;
   font-size: 20px;
   background-color: var(--quinary-color);
@@ -147,23 +147,23 @@
   padding: 5px 0 5px 0;
 }
 
-.login-form #signup-btn {
+.login-form .signup-btn {
   display: flex;
   align-self: center;
   margin: 2.0vh 0 0 0;
 }
 
-#login-btn button:hover {
+.login-btn button:hover {
   background-color: var(--tertiary-color);
   color: var(--quinary-color);
   font-weight: 700;
 }
 
-#login-btn button:active {
+.login-btn button:active {
   transform: translateY(1px);
 }
 
-#signup-btn button {
+.signup-btn button {
   width: 10vw;
   font-size: 20px;
   background-color: var(--quinary-color);
@@ -173,13 +173,13 @@
   padding: 5px 0 5px 0;
 }
 
-#signup-btn button:hover {
+.signup-btn button:hover {
   background-color: var(--tertiary-color);
   color: var(--quinary-color);
   font-weight: 700;
 }
 
-#signup-btn button:active {
+.signup-btn button:active {
   transform: translateY(1px);
 }
 
@@ -213,7 +213,7 @@
   margin: 0 0 0.8vh 0;
 }
 
-.signup-form #signup-btn {
+.signup-form .signup-btn {
   display: flex;
   align-self: center;
   justify-content: center;
@@ -222,7 +222,7 @@
   width: 65%;
 }
 
-.signup-form #login-btn {
+.signup-form .login-btn {
   display: flex;
   align-self: center;
   margin: 2.0vh 0 0 0;

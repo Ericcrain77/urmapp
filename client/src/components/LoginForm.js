@@ -1,10 +1,12 @@
 import React from "react";
 
 function LogIn() {
+
+
     return (
-        <div class='login'>
+        <div className='login'>
             <h2>Log In!</h2>
-            <form class='login-form'>
+            <form className='login-form'>
                 <label>Email:</label>
                 <input 
                     type='email'
@@ -19,10 +21,10 @@ function LogIn() {
                     name='password'
                     required
                 />
-                <div id='login-btn'>
+                <div className='login-btn'>
                     <button type='submit'>Log In</button>
                 </div>
-                <div id='signup-btn'>
+                <div className='signup-btn'>
                     <button type="submit">Sign Up</button>
                 </div>
             </form>

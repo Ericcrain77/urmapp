@@ -2,9 +2,9 @@ import React from "react";
 
 function SignUp() {
     return (
-        <div class="signup">
+        <div className="signup">
             <h2>Sign Up!</h2>
-            <form class='signup-form'>
+            <form className='signup-form'>
                 <label>Username:</label>
                 <input
                     type='text'
@@ -26,10 +26,10 @@ function SignUp() {
                     name='password'
                     required
                 />
-                <div id='signup-btn'>
+                <div className='signup-btn'>
                     <button type="submit">Sign Up</button>
                 </div>
-                <div id='login-btn'>
+                <div className='login-btn'>
                     <button type='submit'>Log In</button>
                 </div>
             </form>
