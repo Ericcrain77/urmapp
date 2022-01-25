@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
+import { useMutation } from "@apollo/client";
 
 import Auth from "../utils/auth";
 
@@ -20,17 +20,25 @@ const LogIn = (props) => {
 
   // update when inputs happen
   const handleFormSubmit = async (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
     event.preventDefault();
 
-    try {
-      const mutationResponse = await login({
-        variables: { email: formState.email, password: formState.password },
-      });
+    console.log(formState);
 
-      const token = mutationResponse.data.login.token;
+    try {
+      const { data } = await login({
+        variables: { ...formState },
+      });
+      console.log(`huh`, data);
+      const token = data.login.token;
       Auth.login(token);
-    } catch (e) {
-      console.error(e);
+    } catch (err) {
+      console.error(err);
     }
 
     // clear values
@@ -49,6 +57,7 @@ const LogIn = (props) => {
           type="email"
           placeholder="Your email address"
           name="email"
+          id="email"
           required
           value={formState.email}
           onChange={handleChange}
@@ -58,6 +67,7 @@ const LogIn = (props) => {
           type="password"
           placeholder="Your password"
           name="password"
+          id="password"
           required
           value={formState.password}
           onChange={handleChange}
@@ -66,7 +76,7 @@ const LogIn = (props) => {
           <button type="submit">Log In</button>
         </div>
         <div id="signup-btn">
-          <button type="submit">Sign Up</button>
+          {/* <button type="submit">Sign Up</button> */}
         </div>
       </form>
 

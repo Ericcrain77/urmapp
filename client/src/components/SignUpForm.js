@@ -5,37 +5,35 @@ import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 
 const Signup = () => {
-  // set initial form state
-  const [userFormData, setUserFormData] = useState({
+  const [formState, setFormState] = useState({
     username: "",
     email: "",
     password: "",
   });
-  // set state for form validation
-  const [validated] = useState(false);
-  // set state for alert
-  const [showAlert, setShowAlert] = useState(false);
-  //useMutation
-  const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [addUser, { error }] = useMutation(ADD_USER);
 
-  const handleInputChange = (event) => {
+  // update state based on form input changes
+  const handleChange = (event) => {
     const { name, value } = event.target;
-    setUserFormData({ ...userFormData, [name]: value });
-    console.log(userFormData);
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
   };
 
+  // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     try {
       const { data } = await addUser({
-        variables: { ...userFormData },
+        variables: { ...formState },
       });
 
-      console.log(data);
       Auth.login(data.addUser.token);
-    } catch (err) {
-      console.error(err);
+    } catch (e) {
+      console.error(e);
     }
   };
 
@@ -49,6 +47,8 @@ const Signup = () => {
           placeholder="Your username"
           name="username"
           required
+          value={formState.username}
+          onChange={handleChange}
         />
         <label>Email:</label>
         <input
@@ -56,6 +56,8 @@ const Signup = () => {
           placeholder="Your email address"
           name="email"
           required
+          value={formState.email}
+          onChange={handleChange}
         />
         <label>Password:</label>
         <input
@@ -63,6 +65,8 @@ const Signup = () => {
           placeholder="Your password"
           name="password"
           required
+          value={formState.password}
+          onChange={handleChange}
         />
         <div id="signup-btn">
           <button type="submit">Sign Up</button>
