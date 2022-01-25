@@ -12,6 +12,8 @@ var selectedStates = [
   "US-AL",
   "US-AK",
 ]
+navigator.geolocation.getCurrentPosition(findState);
+
 
   class Homepage extends Component {
   
