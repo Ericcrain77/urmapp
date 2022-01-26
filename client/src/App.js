@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Login from "./pages/LoginPage";
-import Homepage from "./pages/Homepage";
+import HomePage from "./pages/Homepage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import {
@@ -35,10 +35,10 @@ function App() {
   return (
   <ApolloProvider client={client}>
     <Router>
-      <main>
-        <Homepage />
-        <Login />
-      </main>
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route exact path='/login' component={Login} />
+      </Switch>
     </Router>
    </ApolloProvider>
   );

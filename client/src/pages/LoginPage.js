@@ -14,8 +14,8 @@ function Login() {
         <section className="page-body">
             <Router>
                 <Switch>
-                    <Route exact path = "/"><LogIn/></Route>
-                    <Route path = "/"><SignUp/></Route>
+                    <Route exact path = "/login"><LogIn/></Route>
+                    <Route path = "/signup"><SignUp/></Route>
                 </Switch>
             </Router>
         </section>
