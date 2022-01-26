@@ -11,9 +11,6 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
-import "./App.css";
-
-
 function App() {
 
   const httpLink = createHttpLink({
