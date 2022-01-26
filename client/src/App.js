@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Login from "./pages/Loginpage";
+import Login from "./pages/LoginPage";
 import Homepage from "./pages/Homepage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -37,7 +37,7 @@ function App() {
     <Router>
       <main>
         <Homepage />
-        <LoginSignUpPage />
+        <Login />
       </main>
     </Router>
    </ApolloProvider>
