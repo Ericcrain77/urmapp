@@ -6,7 +6,7 @@ function App() {
 
   return (
     <main>
-      <Homepage />
+      {/* <Homepage /> */}
       <Login />
     </main>
   );
