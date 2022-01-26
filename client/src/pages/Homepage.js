@@ -1,30 +1,38 @@
-import React from 'react';
-import Map from '../components/Map';
-import './style.css';
-import logo164x101 from '../assets/logo164x101.png'
+import React from "react";
+import Map from "../components/Map";
 
-function Homepage() {
+import { useQuery } from "@apollo/client";
+import { GET_ME } from "../utils/queries";
+import logo from "../assets/0.png";
+
+function HomePage() {
+  const { data: userData } = useQuery(GET_ME);
 
   return (
     <section>
-      <header className='header'>
+      <header class="header">
         <a href="/">
-            <img className='header-logo' src={logo164x101} alt="UrMapp Logo" />
+          <img class="header-logo" src={logo} alt="UrMapp Logo" />
         </a>
-        <div className="header-right">
-            <h1>Username</h1>
-            <button type="submit" className='logout-btn'>Log Out</button>
+        <div class="header-right">
+          <h1>{userData.me.username}</h1>
+          <button type="submit" id="logout-btn">
+            Log Out
+          </button>
         </div>
       </header>
-      <section className='page-body-2'>
+      <section class="page-body-2">
         <Map />
       </section>
-      <footer className='footer'>
+      <footer class="footer">
         <h3>UrMapp © 2018</h3>
-        <p><a href="mailto:test@urmappinc.com">Contact Us</a></p>
+        <p>
+          <a href="mailto:test@urmappinc.com">Contact Us</a>
+        </p>
       </footer>
     </section>
-  )
-};
+  );
+}
 
-export default Homepage;
+export default HomePage;
+

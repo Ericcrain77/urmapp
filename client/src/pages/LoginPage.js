@@ -1,18 +1,29 @@
-import React from 'react';
-import LogIn from '../components/LoginForm';
-import SignUp from '../components/SignUpForm';
-import './style.css';
-import logo503x145 from '../assets/logo503x145.png';
+import React, { useState } from "react";
+import LogIn from "../components/LoginForm";
+import SignUp from "../components/SignUpForm";
 
-function Login() {
+import logo from "../assets/0.png";
 
-    return (
-        <section className='page-body'>
-            <img className="login-signup-logo" src={logo503x145} alt='UrMapp Logo' />
-            <LogIn />
-            <SignUp />
-        </section>
-    );
-};
+function LoginSignUpPage() {
+  const [currentPage, setCurrentPage] = useState("LogIn");
 
-export default Login;
+  const renderPage = () => {
+    switch (currentPage) {
+      case "Login":
+        return <LogIn />;
+      case "SignUp":
+        return <SignUp />;
+      default:
+        return <LogIn />;
+    }
+  };
+
+  return (
+    <section class="page-body">
+      <img class="login-signup-logo" src={logo} alt="UrMapp Logo" />
+      {renderPage(currentPage)}
+    </section>
+  );
+}
+
+export default LoginSignUpPage;
