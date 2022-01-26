@@ -5,9 +5,6 @@ import { useQuery } from "@apollo/client";
 import { GET_ME } from "../utils/queries";
 import logo from "../assets/logo164x101.png";
 
-
-const loggedIn = Auth.loggedIn();
-
 function HomePage() {
   const { data: userData } = useQuery(GET_ME);
 
@@ -38,4 +35,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
