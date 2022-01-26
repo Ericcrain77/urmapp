@@ -337,3 +337,93 @@
 .footer p a:hover {
   text-decoration: underline;
 }
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 1100px) {
+  .login-form input {
+    width: 50.0vw;
+  }
+
+  .signup-form input {
+    width: 50.0vw;
+  }
+
+  .login-signup-logo {
+    width: 20.0vw;
+  }
+
+  .login-btn button {
+    width: 20.0vw;
+  }
+
+  .signup-btn button {
+    width: 20.0vw;
+  }
+
+  .header-login-btn {
+    width: 20.0vw;
+  }
+
+  .header-signup-btn {
+    width: 20.0vw;
+  }
+
+  .header-right h1 {
+    font-size: 1.2rem;
+    margin: 8px 30px 0 0;
+  }
+  
+  .header-right a {
+    font-size: 1.0rem;
+    padding: 8px 0 0 0;
+  }
+
+  .footer h3 {
+    font-size: .8rem;
+  }
+
+  .footer p {
+    font-size: .8rem;
+  }
+
+  .header a img {
+    width: 8.0vw;
+    margin: 8px 0 8px 12px;
+  }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 750px) {
+  .login-form input {
+    width: 80.0vw;
+  }
+
+  .signup-form input {
+    width: 80.0vw;
+  }
+
+  .login-signup-logo {
+    width: 40.0vw;
+  }
+
+  .login-btn button {
+    width: 30.0vw;
+  }
+
+  .signup-btn button {
+    width: 30.0vw;
+  }
+
+  .header-login-btn {
+    width: 30.0vw;
+  }
+
+  .header-signup-btn {
+    width: 30.0vw;
+  }
+
+  .header a img {
+    width: 10.0vw;
+    margin: 8px 0 8px 12px;
+  }
+}
