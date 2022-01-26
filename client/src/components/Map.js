@@ -4,17 +4,56 @@ import * as am5map from "@amcharts/amcharts5/map";
 import usaHigh from "@amcharts/amcharts5-geodata/json/usaHigh";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 
-var selectedStates = [
-  "US-CA",
-  "US-TX",
-  "US-TN",
-  "US-AL",
-  "US-AK",
-]
+var google;
+var latlng;
+var latlngStr;
+var selectedStates = [];
 
   class Map extends Component {
   
   componentDidMount() {
+
+    function initMap(latlng) {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 8,
+        center: { lat: 40.731, lng: -73.997 },
+      });
+      const geocoder = new google.maps.Geocoder();
+      const infowindow = new google.maps.InfoWindow();
+      
+      geocodeLatLng(geocoder, map, infowindow, latlng);
+    }
+    
+    function geocodeLatLng(geocoder, map, infowindow ,latlng) {
+      geocoder
+      .geocode({ location: latlng })
+      .then((response) => {
+        if (response.results[0]) {
+          map.setZoom(11);
+          
+          const marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            });
+            console.log(response.results[0].address_components[5].short_name + '-' + response.results[0].address_components[4].short_name);
+             infowindow.open(map, marker);
+          } else {
+            window.alert("No results found");
+          }
+        })
+      };
+      
+      const findme = (props) => {
+        navigator.geolocation.getCurrentPosition(geolocationCallback);  
+        function geolocationCallback(position){
+          let lat = position.coords.latitude;
+          let lng = position.coords.longitude;
+          latlngStr = lat + ',' + lng;
+          latlng = {lat, lng}
+          console.log(latlngStr);
+          initMap(latlng);
+        }
+      }
 
     var root = am5.Root.new("mapdiv");
     
