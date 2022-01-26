@@ -14,6 +14,8 @@ import { GET_ME } from "../utils/queries";
 function Map(userData) {
   const loggedIn = Auth.loggedIn();
 
+  const [addState, { error }] = useMutation(ADD_STATE);
+
   const selectedStates = userData.userData.me.states;
   console.log(userData.userData.me.states);
 
@@ -43,6 +45,23 @@ function Map(userData) {
     polygonSeries.mapPolygons.template.states.create("hover", {
       fill: am5.color(0xff6b6b),
     });
+
+    var polygonTemplate = polygonSeries.mapPolygons.template;
+
+    polygonTemplate.events.on(
+      "click",
+      (ev) => {
+        try {
+          const { data } = addState({
+            variables: { state: ev.target.dataItem.dataContext.id },
+          });
+          window.location.reload();
+        } catch (e) {
+          console.error(e);
+        }
+      },
+      this
+    );
 
     for (let i = 0; i < selectedStates.length; i++) {
       polygonSeries.mapPolygons.template.adapters.add(
