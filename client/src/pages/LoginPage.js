@@ -6,13 +6,13 @@ import './style.css';
 
 
 function Login() {
-    const [currentPage, setCurrentPage] = useState("#login");
+    const [currentPage, setCurrentPage] = useState("LogIn");
 
     const renderPage = () => {
         switch (currentPage) {
-        case "#login":
+        case "Login":
             return <LogIn />;
-        case "#signup":
+        case "SignUp":
             return <SignUp />;
         default:
             return <LogIn />;
@@ -20,13 +20,11 @@ function Login() {
     };
 
     return (
-        <div>
-            <Header currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-            />
+        <section className="page-body">
+            <Header />
             {renderPage(currentPage)}
-        </div>
+        </section>
     );
-};
+}
 
 export default Login;

@@ -47,7 +47,7 @@
   color: var(--septenary-color);
 }
 
-.header-right button {
+.header-right a {
   align-self: center;
   margin: 0 30px 8px 0;
   padding: 8px;
@@ -56,18 +56,19 @@
   background: none;
   color: var(--quinary-color);
   border: none;
+  text-decoration: none;
   border-radius: 8px;
   opacity: 50%;
 }
 
-.header-right button:hover {
+.header-right a:hover {
   opacity: 100%;
   background-color: var(--tertiary-color);
   color: var(--quinary-color);
   box-shadow: 0 0 5px var(--senary-color);
 }
 
-.header-right button:active {
+.header-right a:active {
   transform: translateY(1px);
 }
 

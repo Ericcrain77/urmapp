@@ -110,7 +110,7 @@ var selectedStates = [];
       <div>
 
       <div id="mapdiv"></div>
-      <button onClick={findme}></button>
+      {/* <button onClick={findme}></button> */}
         
       </div>
     );

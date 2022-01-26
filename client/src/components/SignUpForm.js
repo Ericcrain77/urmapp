@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-
 import { ADD_USER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
+import logo503x145 from '../assets/logo503x145.png';
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -38,44 +38,46 @@ const Signup = () => {
   };
 
   return (
-    <div class="signup">
-      <h2>Sign Up!</h2>
-      <form class="signup-form" onSubmit={handleFormSubmit}>
-        <label>Username:</label>
-        <input
-          type="text"
-          placeholder="Your username"
-          name="username"
-          required
-          value={formState.username}
-          onChange={handleChange}
-        />
-        <label>Email:</label>
-        <input
-          type="email"
-          placeholder="Your email address"
-          name="email"
-          required
-          value={formState.email}
-          onChange={handleChange}
-        />
-        <label>Password:</label>
-        <input
-          type="password"
-          placeholder="Your password"
-          name="password"
-          required
-          value={formState.password}
-          onChange={handleChange}
-        />
-        <div id="signup-btn">
-          <button type="submit">Sign Up</button>
+    <section className='page-body'>
+      <img className="login-signup-logo" src={logo503x145} alt='UrMapp Logo' />
+        <div className="signup">
+          <h2>Sign Up!</h2>
+          <form className="signup-form" onSubmit={handleFormSubmit}>
+            <label>Username:</label>
+            <input
+              type="text"
+              placeholder="Your username"
+              name="username"
+              required
+              value={formState.username}
+              onChange={handleChange}
+            />
+            <label>Email:</label>
+            <input
+              type="email"
+              placeholder="Your email address"
+              name="email"
+              required
+              value={formState.email}
+              onChange={handleChange}
+            />
+            <label>Password:</label>
+            <input
+              type="password"
+              placeholder="Your password"
+              name="password"
+              required
+              value={formState.password}
+              onChange={handleChange}
+            />
+            <div className="signup-btn">
+              <button type="submit">Sign Up</button>
+            </div>
+          </form>
+
+          {error && <div>Sign Up Failed</div>}
         </div>
-        <div id="login-btn">
-          <button type="submit">Log In</button>
-        </div>
-      </form>
-    </div>
+      </section>
   );
 };
 
