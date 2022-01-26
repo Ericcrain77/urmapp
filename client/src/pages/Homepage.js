@@ -1,5 +1,6 @@
 import React from "react";
 import Map from "../components/Map";
+import GeoBtn from "../components/GeoBtn";
 import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
 import { GET_ME } from "../utils/queries";
@@ -23,6 +24,9 @@ function HomePage() {
       </header>
       <section className="page-body-2">
         <Map />
+      </section>
+      <section>
+        <GeoBtn />
       </section>
       <footer className="footer">
         <h3>UrMapp © 2018</h3>
