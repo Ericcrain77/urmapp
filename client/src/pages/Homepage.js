@@ -10,7 +10,7 @@ import "./style.css";
 
 function HomePage() {
   const { data: userData } = useQuery(GET_ME);
-  console.log(userData);
+  
 
   const loggedIn = Auth.loggedIn();
 
@@ -22,7 +22,7 @@ function HomePage() {
         </a>
         <div className="header-right">
           {loggedIn && userData ? <h1>{userData.me.username}</h1> : null}
-          <Link to="/login" onClick={Auth.logout}>
+          <Link to="/" onClick={Auth.logout}>
             Logout
           </Link>
         </div>
@@ -31,7 +31,7 @@ function HomePage() {
         {userData && <Map userData={userData} />}
       </section>
       <section>
-        <GeoBtn />
+      
       </section>
       <footer className="footer">
         <h3>UrMapp © 2018</h3>

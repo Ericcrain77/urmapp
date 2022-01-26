@@ -75,7 +75,7 @@ const Signup = () => {
               <button type="submit">Sign Up</button>
             </div>
           </form>
-          <Link to='/login' className='header-login-btn' style={{textDecoration: 'none', color: 'white' }}>Log In</Link>
+          <Link to='/' className='header-login-btn' style={{textDecoration: 'none', color: 'white' }}>Log In</Link>
           {error && <div>Sign Up Failed</div>}
         </div>
       </section>
