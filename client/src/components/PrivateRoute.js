@@ -5,6 +5,9 @@ import { Redirect, Route } from "react-router-dom";
 import { Component } from "@amcharts/amcharts5";
 import { removeDirectivesFromDocument } from "@apollo/client/utilities";
 
+// general idea on how to do this part came from
+// https://stackoverflow.com/questions/47476186/when-user-is-not-logged-in-redirect-to-login-reactjs
+
 const PrivateRoute = ({ component: Component, ...rest }) => {
   // authenticate the user
   const loggedIn = Auth.loggedIn();
