@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { LOGIN_USER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
+import { Link, useHistory } from 'react-router-dom';
 import logo503x145 from '../assets/logo503x145.png';
 import Auth from "../utils/auth";
 
 const LogIn = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN_USER);
+
+  const history = useHistory();
 
   //submit the thing
   const handleChange = (event) => {
@@ -37,6 +40,7 @@ const LogIn = (props) => {
       console.log(`huh`, data);
       const token = data.login.token;
       Auth.login(token);
+      history.push("/userhome");
     } catch (err) {
       console.error(err);
     }
@@ -78,6 +82,7 @@ const LogIn = (props) => {
             <button type="submit">Log In</button>
           </div>
         </form>
+        <Link to='/signup' className='header-signup-btn' style={{textDecoration: 'none', color: 'white'}}>Sign Up</Link>
         {error && <div>Login Failed</div>}
       </div>
     </section>

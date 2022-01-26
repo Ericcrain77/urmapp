@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ADD_USER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
+import { Link } from 'react-router-dom';
 import Auth from "../utils/auth";
 import logo503x145 from '../assets/logo503x145.png';
 
@@ -74,7 +75,7 @@ const Signup = () => {
               <button type="submit">Sign Up</button>
             </div>
           </form>
-
+          <Link to='/login' className='header-login-btn' style={{textDecoration: 'none', color: 'white' }}>Log In</Link>
           {error && <div>Sign Up Failed</div>}
         </div>
       </section>

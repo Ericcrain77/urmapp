@@ -2,6 +2,7 @@ import React from "react";
 import Map from "../components/Map";
 import GeoBtn from "../components/GeoBtn";
 import Auth from "../utils/auth";
+import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_ME } from "../utils/queries";
 import logo from "../assets/logo164x101.png";
@@ -20,10 +21,10 @@ function HomePage() {
           <img className="header-logo" src={logo} alt="UrMapp Logo" />
         </a>
         <div className="header-right">
-          {/* {loggedIn && userData ? <h1>{userData.me.username}</h1> : null} */}
-          <a href="" className="header-right">
-            Log Out
-          </a>
+          {loggedIn && userData ? <h1>{userData.me.username}</h1> : null}
+          <Link to="/login" onClick={Auth.logout}>
+            Logout
+          </Link>
         </div>
       </header>
       <section className="page-body-2">
