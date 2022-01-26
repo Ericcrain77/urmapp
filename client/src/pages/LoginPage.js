@@ -9,7 +9,7 @@ function Login() {
     <section className="page-body">
       <Router>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/login">
             <LogIn />
           </Route>
           <Route path="/signup">

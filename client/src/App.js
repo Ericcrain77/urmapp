@@ -2,6 +2,7 @@ import React from "react";
 import Login from "./pages/LoginPage";
 import HomePage from "./pages/Homepage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import PrivateRoute from "./components/PrivateRoute";
 
 import {
   ApolloClient,
@@ -35,8 +36,8 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/homepage" component={HomePage} />
+          <Route exact path="/login" component={Login} />
+          <PrivateRoute exact path="/" component={HomePage} />
         </Switch>
       </Router>
     </ApolloProvider>

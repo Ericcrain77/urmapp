@@ -76,7 +76,7 @@ const Signup = () => {
           </div>
         </form>
         <Link
-          to="/"
+          to="/login"
           className="header-login-btn"
           style={{ textDecoration: "none", color: "white" }}
         >
