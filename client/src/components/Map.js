@@ -109,13 +109,13 @@ function Map(props) {
       //   }
       // }
 
-      <div id="mapdiv"></div>
+      // <div id="mapdiv"></div>
       {/* <button onClick={findme}></button> */}
         
-      </div>
-    );
-  }
-}
+//       </div>
+//     );
+//   }
+// }
 //     var root = am5.Root.new("mapdiv");
     
 //     root.setThemes([
