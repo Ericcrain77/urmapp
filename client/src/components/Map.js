@@ -107,7 +107,14 @@ var selectedStates = [];
 
   render() {
     return (
-      <div id="mapdiv"></div>
+      <div>
+
+      <div id="mapdiv">
+        <button onClick={findme}></button>
+
+      </div>
+      
+      </div>
     );
   }
 }
