@@ -49,9 +49,9 @@ const LogIn = (props) => {
   };
 
   return (
-    <div class="login">
+    <div className="login">
       <h2>Log In!</h2>
-      <form class="login-form" onSubmit={handleFormSubmit}>
+      <form className="login-form" onSubmit={handleFormSubmit}>
         <label>Email:</label>
         <input
           type="email"

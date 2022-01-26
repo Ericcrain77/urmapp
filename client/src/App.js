@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import LoginSignUpPage from "./pages/LoginPage";
-import HomePage from "./pages/Homepage";
+import Homepage from "./pages/Homepage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import {
@@ -17,7 +17,7 @@ import "./App.css";
 function App() {
 
   const httpLink = createHttpLink({
-    uri: "/graphql",
+    uri: "http://localhost:3001/graphql",
   });
 
   const authLink = setContext((_, { headers }) => {
@@ -40,7 +40,7 @@ function App() {
     <Router>
       <main>
         <Homepage />
-        <Login />
+        <LoginSignUpPage />
       </main>
     </Router>
    </ApolloProvider>
