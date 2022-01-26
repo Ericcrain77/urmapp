@@ -24,6 +24,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 
 .header a img {
@@ -99,7 +100,7 @@
 .page-body h2 {
   display: flex;
   align-self: center;
-  margin: 0 0 2.0vh 0;
+  padding-top: 2.0vh;
 }
 
 .login {
@@ -226,6 +227,11 @@
   display: flex;
   align-self: center;
   margin: 2.0vh 0 0 0;
+}
+
+#mapdiv {
+  padding-top: 13.0vh;
+  width: 100%; 
 }
 
 .footer {

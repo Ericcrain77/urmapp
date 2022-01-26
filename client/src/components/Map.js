@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../src/App.css';
 import * as am5 from "@amcharts/amcharts5";
 import * as am5map from "@amcharts/amcharts5/map";
 import usaHigh from "@amcharts/amcharts5-geodata/json/usaHigh";
@@ -69,7 +68,7 @@ var selectedStates = [
 
   render() {
     return (
-      <div id="mapdiv" style={{ width: "100%", height: "500px" }}></div>
+      <div id="mapdiv"></div>
     );
   }
 }

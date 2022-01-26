@@ -77,6 +77,7 @@ const LogIn = (props) => {
         </div>
         <div id="signup-btn">
           {/* <button type="submit">Sign Up</button> */}
+
         </div>
       </form>
 

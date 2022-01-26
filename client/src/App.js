@@ -13,19 +13,8 @@ import { setContext } from "@apollo/client/link/context";
 
 import "./App.css";
 
-function App() {
-  const [currentPage] = useState(" ");
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case "LoginSignUpPage":
-        return <LoginSignUpPage />;
-      case "HomePage":
-        return <HomePage />;
-      default:
-        return <LoginSignUpPage />;
-    }
-  };
+function App() {
 
   const httpLink = createHttpLink({
     uri: "/graphql",
@@ -47,12 +36,15 @@ function App() {
   });
 
   return (
-    <ApolloProvider client={client}>
-      <Router>
-        <main>{renderPage(currentPage)}</main>
-      </Router>
-    </ApolloProvider>
+  <ApolloProvider client={client}>
+    <Router>
+      <main>
+        <Homepage />
+        <Login />
+      </main>
+    </Router>
+   </ApolloProvider>
   );
-}
+};
 
 export default App;
