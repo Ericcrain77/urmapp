@@ -2,13 +2,15 @@ import React from "react";
 import Map from "../components/Map";
 import GeoBtn from "../components/GeoBtn";
 import Auth from "../utils/auth";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_ME } from "../utils/queries";
 import logo from "../assets/logo164x101.png";
+import "./style.css";
 
 function HomePage() {
   const { data: userData } = useQuery(GET_ME);
+  console.log(userData);
 
   const loggedIn = Auth.loggedIn();
 
@@ -20,11 +22,13 @@ function HomePage() {
         </a>
         <div className="header-right">
           {loggedIn && userData ? <h1>{userData.me.username}</h1> : null}
-          <Link to='/login' onClick={Auth.logout}>Logout</Link>     
+          <Link to="/login" onClick={Auth.logout}>
+            Logout
+          </Link>
         </div>
       </header>
       <section className="page-body-2">
-        <Map />
+        {userData && <Map userData={userData} />}
       </section>
       <section>
         <GeoBtn />

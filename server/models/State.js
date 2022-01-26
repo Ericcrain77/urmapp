@@ -4,7 +4,6 @@ const stateSchema = new Schema({
   state: {
     type: String,
     required: true,
-    unique: true,
   },
   visitedAt: {
     type: Date,

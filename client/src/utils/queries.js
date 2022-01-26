@@ -9,9 +9,7 @@ export const GET_ME = gql`
       states {
         _id
         state
-        visitedAt
       }
-      statesVisited
     }
   }
 `;
