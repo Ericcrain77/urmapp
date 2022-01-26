@@ -61,7 +61,7 @@ function Map(props) {
 
   return (
     
-      <div id="mapdiv" style={{ width: "100%", height: "500px" }}></div>
+      <div id="mapdiv"></div>
   
   );
 }
@@ -110,7 +110,7 @@ function Map(props) {
       // }
 
       // <div id="mapdiv"></div>
-      {/* <button onClick={findme}></button> */}
+      //{/* <button onClick={findme}></button> */}
         
 //       </div>
 //     );
