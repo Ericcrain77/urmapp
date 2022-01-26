@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { LOGIN_USER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
-import { Link, useHistory } from 'react-router-dom';
-import logo503x145 from '../assets/logo503x145.png';
+import { Link, useHistory } from "react-router-dom";
+import logo503x145 from "../assets/logo503x145.png";
 import Auth from "../utils/auth";
 
 const LogIn = (props) => {
@@ -53,8 +53,8 @@ const LogIn = (props) => {
   };
 
   return (
-    <section className='page-body'>
-      <img className="login-signup-logo" src={logo503x145} alt='UrMapp Logo' />
+    <section className="page-body">
+      <img className="login-signup-logo" src={logo503x145} alt="UrMapp Logo" />
       <div className="login">
         <h2>Log In!</h2>
         <form className="login-form" onSubmit={handleFormSubmit}>
@@ -82,7 +82,13 @@ const LogIn = (props) => {
             <button type="submit">Log In</button>
           </div>
         </form>
-        <Link to='/signup' className='header-signup-btn' style={{textDecoration: 'none', color: 'white'}}>Sign Up</Link>
+        <Link
+          to="/signup"
+          className="header-signup-btn"
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          Sign Up
+        </Link>
         {error && <div>Login Failed</div>}
       </div>
     </section>

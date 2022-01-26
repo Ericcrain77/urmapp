@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { ADD_USER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
-import logo503x145 from '../assets/logo503x145.png';
+import logo503x145 from "../assets/logo503x145.png";
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -39,46 +39,52 @@ const Signup = () => {
   };
 
   return (
-    <section className='page-body'>
-      <img className="login-signup-logo" src={logo503x145} alt='UrMapp Logo' />
-        <div className="signup">
-          <h2>Sign Up!</h2>
-          <form className="signup-form" onSubmit={handleFormSubmit}>
-            <label>Username:</label>
-            <input
-              type="text"
-              placeholder="Your username"
-              name="username"
-              required
-              value={formState.username}
-              onChange={handleChange}
-            />
-            <label>Email:</label>
-            <input
-              type="email"
-              placeholder="Your email address"
-              name="email"
-              required
-              value={formState.email}
-              onChange={handleChange}
-            />
-            <label>Password:</label>
-            <input
-              type="password"
-              placeholder="Your password"
-              name="password"
-              required
-              value={formState.password}
-              onChange={handleChange}
-            />
-            <div className="signup-btn">
-              <button type="submit">Sign Up</button>
-            </div>
-          </form>
-          <Link to='/login' className='header-login-btn' style={{textDecoration: 'none', color: 'white' }}>Log In</Link>
-          {error && <div>Sign Up Failed</div>}
-        </div>
-      </section>
+    <section className="page-body">
+      <img className="login-signup-logo" src={logo503x145} alt="UrMapp Logo" />
+      <div className="signup">
+        <h2>Sign Up!</h2>
+        <form className="signup-form" onSubmit={handleFormSubmit}>
+          <label>Username:</label>
+          <input
+            type="text"
+            placeholder="Your username"
+            name="username"
+            required
+            value={formState.username}
+            onChange={handleChange}
+          />
+          <label>Email:</label>
+          <input
+            type="email"
+            placeholder="Your email address"
+            name="email"
+            required
+            value={formState.email}
+            onChange={handleChange}
+          />
+          <label>Password:</label>
+          <input
+            type="password"
+            placeholder="Your password"
+            name="password"
+            required
+            value={formState.password}
+            onChange={handleChange}
+          />
+          <div className="signup-btn">
+            <button type="submit">Sign Up</button>
+          </div>
+        </form>
+        <Link
+          to="/"
+          className="header-login-btn"
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          Log In
+        </Link>
+        {error && <div>Sign Up Failed</div>}
+      </div>
+    </section>
   );
 };
 
