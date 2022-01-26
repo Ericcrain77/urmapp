@@ -24,6 +24,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 
 .header a img {
@@ -46,7 +47,7 @@
   color: var(--septenary-color);
 }
 
-.header-right button {
+.header-right a {
   align-self: center;
   margin: 0 30px 8px 0;
   padding: 8px;
@@ -55,19 +56,38 @@
   background: none;
   color: var(--quinary-color);
   border: none;
+  text-decoration: none;
   border-radius: 8px;
   opacity: 50%;
 }
 
-.header-right button:hover {
+.header-right a:hover {
   opacity: 100%;
   background-color: var(--tertiary-color);
   color: var(--quinary-color);
   box-shadow: 0 0 5px var(--senary-color);
 }
 
-.header-right button:active {
+.header-right a:active {
   transform: translateY(1px);
+}
+
+.login-nav {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.login-nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+
+}
+
+.login-nav ul li {
+  margin: 0 1.0vw;
 }
 
 .page-body {
@@ -77,7 +97,7 @@
   justify-content: center;
   flex-direction: column;
   padding-bottom: 15.0vh;
-  background-image: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color) );
+  background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color)) fixed;
 }
 
 .page-body-2 {
@@ -99,7 +119,7 @@
 .page-body h2 {
   display: flex;
   align-self: center;
-  margin: 0 0 2.0vh 0;
+  padding-top: 2.0vh;
 }
 
 .login {
@@ -134,6 +154,7 @@
   justify-content: center;
   padding: 1.0vh 0 2.0vh 0;
   border-bottom: solid 1px var(--senary-color);
+  margin-bottom: 2.0vh;
   width: 65%;
 }
 
@@ -145,6 +166,32 @@
   border: none;
   border-radius: 4px;
   padding: 5px 0 5px 0;
+}
+
+.header-login-btn {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 10vw;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: var(--quinary-color);
+  color: var(--septenary-color);
+  border: none;
+  border-radius: 4px;
+  padding: 5px 0 5px 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.header-login-btn:hover {
+  background-color: var(--tertiary-color);
+  color: var(--quinary-color);
+  font-weight: 700;
+}
+
+.header-login-btn:active {
+  transform: translateY(1px);
 }
 
 .login-form .signup-btn {
@@ -171,6 +218,31 @@
   border: none;
   border-radius: 4px;
   padding: 5px 0 5px 0;
+}
+
+.header-signup-btn {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 10vw;
+  font-size: 20px;
+  background-color: var(--quinary-color);
+  color: var(--septenary-color);
+  border: none;
+  border-radius: 4px;
+  padding: 5px 0 5px 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.header-signup-btn:hover {
+  background-color: var(--tertiary-color);
+  color: var(--quinary-color);
+  font-weight: 700;
+}
+
+.header-signup-btn:active {
+  transform: translateY(1px);
 }
 
 .signup-btn button:hover {
@@ -219,6 +291,7 @@
   justify-content: center;
   padding: 1.0vh 0 2.0vh 0;
   border-bottom: solid 1px var(--senary-color);
+  margin-bottom: 2.0vh;
   width: 65%;
 }
 
@@ -226,6 +299,11 @@
   display: flex;
   align-self: center;
   margin: 2.0vh 0 0 0;
+}
+
+#mapdiv {
+  padding-top: 13.0vh;
+  width: 100%; 
 }
 
 .footer {
