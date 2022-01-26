@@ -4,10 +4,7 @@ import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
 import { GET_ME } from "../utils/queries";
 import logo from "../assets/logo164x101.png";
-<<<<<<< HEAD
 import "./style.css";
-=======
->>>>>>> 371afa7d2ec5d5acb94d4b730d682b0bbf1c0a29
 
 function HomePage() {
   const { data: userData } = useQuery(GET_ME);
@@ -41,8 +38,4 @@ function HomePage() {
   );
 }
 
-<<<<<<< HEAD
 export default HomePage;
-=======
-export default HomePage;
->>>>>>> 371afa7d2ec5d5acb94d4b730d682b0bbf1c0a29
