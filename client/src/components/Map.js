@@ -176,9 +176,15 @@ function Map(userData) {
   // }
   // }
   return (
+<<<<<<< HEAD
     <div id="mapdiv" style={{ width: "100%", height: "500px" }}>
       {/* <button onClick={findme}></button> */}
     </div>
+=======
+    
+      <div id="mapdiv"></div>
+  
+>>>>>>> 371afa7d2ec5d5acb94d4b730d682b0bbf1c0a29
   );
 }
 
