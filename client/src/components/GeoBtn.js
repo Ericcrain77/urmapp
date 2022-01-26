@@ -22,7 +22,7 @@ const GeoBtn = () => {
         }
                 return (
                     <div>
-                        <button onClick={findme}> push me </button>
+                        <button onClick={findme}> Add Your Location </button>
                     </div>
                 );
     
