@@ -37,7 +37,7 @@ function App() {
     <Router>
       <main>
         <Homepage />
-        <Login />
+        <LoginSignUpPage />
       </main>
     </Router>
    </ApolloProvider>

@@ -4,6 +4,9 @@ import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
 import { GET_ME } from "../utils/queries";
 import logo from "../assets/logo164x101.png";
+import Auth from "../utils/auth";
+
+const loggedIn = Auth.loggedIn();
 
 function HomePage() {
   const { data: userData } = useQuery(GET_ME);
