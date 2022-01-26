@@ -109,12 +109,9 @@ var selectedStates = [];
     return (
       <div>
 
-      <div id="mapdiv">
+      <div id="mapdiv"></div>
+      <button onClick={findme}></button>
         
-        <button onClick={findme}></button>
-
-      </div>
-      
       </div>
     );
   }
