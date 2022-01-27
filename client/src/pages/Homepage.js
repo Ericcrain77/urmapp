@@ -34,7 +34,7 @@ function HomePage() {
         <GeoBtn />
       </section>
       <footer className="footer">
-        <h3>UrMapp © 2018</h3>
+        <h3>UrMapp © 2022</h3>
         <p>
           <a href="mailto:test@urmappinc.com">Contact Us</a>
         </p>
