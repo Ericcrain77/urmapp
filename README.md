@@ -18,10 +18,10 @@ UrMapp is a react application that uses the Google Javascript Maps API to displa
 
 ## Screenshots
 Sign Up Page
-![Sign Up Page](assets/images/Signup-page.jpg)
+![Sign-Up-Page](assets/images/Signup-page.jpg)
 
 Log In Page
-![Log In Page](assets/images/Login-page.jpg)
+![Log-In-Page](assets/images/Login-page.jpg)
 
 HomePage
 ![HomePage](assets/images/HomePage.jpg)
